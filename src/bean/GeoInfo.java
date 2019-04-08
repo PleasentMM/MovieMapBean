@@ -25,9 +25,9 @@ public class GeoInfo {
     //地图评分
     private float rating;
     //相关电影信息
-    private HashSet<Integer> movieIds;
+    private HashSet<Integer> movieIds = new HashSet<>();
     //相关对地理位置的评论信息
-    private HashSet<Integer> commentIds;
+    private HashSet<Integer> commentIds = new HashSet<>();
 
     public int getId() {
         return Id;

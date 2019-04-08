@@ -11,7 +11,10 @@ public class Main {
         Reply reply = new Reply("asdasd",12);
         UserDetails userDetails = new UserDetails();
         userDetails.setId(1);
-
+        userDetails.addRateToComment(1,30.33f);
+        userDetails.addRateToComment(2,3.09f);
+        user.addColleMovieIds(1);
+        user.addColleMovieIds(2);
 
         System.out.println(movie.toString());
         System.out.println(geoInfo.toString());

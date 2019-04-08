@@ -23,7 +23,7 @@ public class Comment {
     //对此评论的投票
     private int vote;
     //回复Id
-    private HashSet<Integer> replyId;
+    private HashSet<Integer> replyId = new HashSet<>();
 
     public int getToMovieId() {
         return toMovieId;

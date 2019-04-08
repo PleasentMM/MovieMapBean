@@ -37,9 +37,9 @@ public class Movie {
     //评价人数
     private int ratedCount;
     //相关的地理位置信息ID,存数据库时经行序列化
-    private HashSet<Integer> geoInfoIds;
+    private HashSet<Integer> geoInfoIds = new HashSet<>();
     //相关的回复信息ID,存数据库时经行序列化
-    private HashSet<Integer> commentIds;
+    private HashSet<Integer> commentIds = new HashSet<>();
 
     public int getId() {
         return Id;

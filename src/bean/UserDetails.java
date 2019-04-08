@@ -7,9 +7,9 @@ public class UserDetails {
     //用户详细信息Id
     private int Id;
     //用户对某个电影的评分,Integer电影Id,Float电影评分
-    private HashMap<Integer,Float> rateToMovie;
+    private HashMap<Integer,Float> rateToMovie = new HashMap<>();
     //用户对某个评论的评分
-    private HashMap<Integer,Float> rateToComment;
+    private HashMap<Integer,Float> rateToComment = new HashMap<>();
 
     public int getId() {
         return Id;

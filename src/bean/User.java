@@ -21,13 +21,13 @@ public class User {
     //国家
     private String nation;
     //收藏的电影Id
-    private HashSet<Integer> colleMovieIds;
+    private HashSet<Integer> colleMovieIds = new HashSet<>();
     //发出的评论的Id
-    private HashSet<Integer> commentIds;
+    private HashSet<Integer> commentIds = new HashSet<>();
     //收藏的地理位置Id
-    private HashSet<Integer> colleGeoInfoIds;
+    private HashSet<Integer> colleGeoInfoIds = new HashSet<>();
     //关注的用户Id
-    private HashSet<Integer> colleUserIds;
+    private HashSet<Integer> colleUserIds = new HashSet<>();
 
     public int getId() {
         return Id;
