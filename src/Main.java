@@ -7,6 +7,7 @@ public class Main {
         User user = new User("Mcc","123123");
         Comment comment = new Comment(1,"nihao ",1);
         Reply reply = new Reply("asdasd",12);
+
         System.out.println(movie.toString());
         System.out.println(geoInfo.toString());
         System.out.println(user.toString());
