@@ -5,7 +5,7 @@ import java.util.HashSet;
 public class GeoInfo {
 
     //实例化GeoInfo必须有经纬度
-    public GeoInfo(float longitude, float dimension) {
+    public GeoInfo(double longitude, double dimension) {
         this.longitude = longitude;
         this.dimension = dimension;
     }
@@ -13,9 +13,9 @@ public class GeoInfo {
     //地理信息Id
     private int Id;
     //经度
-    private float longitude;
+    private double longitude;
     //维度
-    private float dimension;
+    private double dimension;
     //地区
     private String region;
     //地区详细信息
@@ -35,19 +35,19 @@ public class GeoInfo {
         Id = id;
     }
 
-    public float getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(float longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
-    public float getDimension() {
+    public double getDimension() {
         return dimension;
     }
 
-    public void setDimension(float dimension) {
+    public void setDimension(double dimension) {
         this.dimension = dimension;
     }
 
