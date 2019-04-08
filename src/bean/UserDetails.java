@@ -1,6 +1,5 @@
 package bean;
 
-import java.io.FileReader;
 import java.util.HashMap;
 
 public class UserDetails {
