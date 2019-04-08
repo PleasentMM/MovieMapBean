@@ -20,14 +20,6 @@ public class User {
     private String sex;
     //国家
     private String nation;
-    //收藏的电影Id
-    private HashSet<Integer> colleMovieIds = new HashSet<>();
-    //发出的评论的Id
-    private HashSet<Integer> commentIds = new HashSet<>();
-    //收藏的地理位置Id
-    private HashSet<Integer> colleGeoInfoIds = new HashSet<>();
-    //关注的用户Id
-    private HashSet<Integer> colleUserIds = new HashSet<>();
 
     public int getId() {
         return Id;
@@ -69,58 +61,6 @@ public class User {
         this.nation = nation;
     }
 
-    public HashSet<Integer> getColleMovieIds() {
-        return colleMovieIds;
-    }
-
-    public void setColleMovieIds(HashSet<Integer> colleMovieId) {
-        this.colleMovieIds = colleMovieId;
-    }
-
-    public void addColleMovieIds(int Id) {
-        colleMovieIds.add(Id);
-    }
-
-    public void removeColleMovieIds(int Id) {
-        if (commentIds.contains(Id)) {
-            commentIds.remove(Id);
-        }
-    }
-
-    public HashSet<Integer> getCommentIds() {
-        return commentIds;
-    }
-
-    public void setCommentIds(HashSet<Integer> commentId) {
-        this.commentIds = commentId;
-    }
-
-    public void addCommentId(int id) {
-        commentIds.add(id);
-    }
-
-    public void removeCommentId(int id) {
-        if (commentIds.contains(id)) {
-            commentIds.remove(id);
-        }
-    }
-
-    public HashSet<Integer> getColleGeoInfoIds() {
-        return colleGeoInfoIds;
-    }
-
-    public void setColleGeoInfoIds(HashSet<Integer> colleGeoInfoId) {
-        this.colleGeoInfoIds = colleGeoInfoId;
-    }
-
-    public HashSet<Integer> getColleUserIds() {
-        return colleUserIds;
-    }
-
-    public void setColleUserIds(HashSet<Integer> colleUserId) {
-        this.colleUserIds = colleUserId;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -130,10 +70,6 @@ public class User {
                 ", passWord='" + passWord + '\'' +
                 ", sex='" + sex + '\'' +
                 ", nation='" + nation + '\'' +
-                ", colleMovieIds=" + colleMovieIds +
-                ", commentIds=" + commentIds +
-                ", colleGeoInfoIds=" + colleGeoInfoIds +
-                ", colleUserIds=" + colleUserIds +
                 '}';
     }
 }

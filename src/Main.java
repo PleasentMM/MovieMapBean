@@ -11,7 +11,9 @@ public class Main {
         Reply reply = new Reply("asdasd",12);
         UserDetails userDetails = new UserDetails();
         userDetails.setId(1);
+        float asd= 34.12f;
         userDetails.addRateToComment(1,30.33f);
+        userDetails.addRateToComment(2,asd);
 
         System.out.println(movie.toString());
         System.out.println(geoInfo.toString());
