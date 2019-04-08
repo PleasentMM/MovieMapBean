@@ -1,5 +1,6 @@
 package bean;
 
+import java.io.FileReader;
 import java.util.HashMap;
 
 public class UserDetails {
@@ -26,7 +27,7 @@ public class UserDetails {
         this.rateToMovie = rateToMovie;
     }
 
-    public void addRateToMovie(int movieId, float rating) {
+    public void addRateToMovie(int movieId, Float rating) {
         rateToMovie.put(movieId,rating);
     }
 
@@ -38,7 +39,16 @@ public class UserDetails {
         this.rateToComment = rateToComment;
     }
 
-    public void addRateToComment(int commentId, float rating) {
+    public void addRateToComment(int commentId, Float rating) {
         rateToComment.put(commentId,rating);
+    }
+
+    @Override
+    public String toString() {
+        return "UserDetails{" +
+                "Id=" + Id +
+                ", rateToMovie=" + rateToMovie +
+                ", rateToComment=" + rateToComment +
+                '}';
     }
 }

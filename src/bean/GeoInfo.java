@@ -22,6 +22,8 @@ public class GeoInfo {
     private String regionDetail;
     //地图电影信息描述
     private String regionMovieDetail;
+    //地图评分
+    private float rating;
     //相关电影信息
     private HashSet<Integer> movieIds;
     //相关对地理位置的评论信息
@@ -75,34 +77,48 @@ public class GeoInfo {
         this.regionMovieDetail = regionMovieDetail;
     }
 
-    public HashSet<Integer> getMovieId() {
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+
+    public HashSet<Integer> getMovieIds() {
         return movieIds;
     }
 
-    public void setMovieId(HashSet<Integer> movieId) {
-        this.movieIds = movieId;
+    public void setMovieIds(HashSet<Integer> movieIds) {
+        this.movieIds = movieIds;
     }
 
-    public void addMovieId(int Id) {
-        movieIds.add(Id);
+    public void addMovieId(int id) {
+        movieIds.add(id);
     }
 
-    public void removeMovieId(int Id) {
-        if (movieIds.contains(Id)) {
-            movieIds.remove(Id);
+    public void removeMovieId(int id) {
+        if (movieIds.contains(id)) {
+            movieIds.remove(id);
         }
     }
 
-    public HashSet<Integer> getUserId() {
+    public HashSet<Integer> getCommentIds() {
         return commentIds;
     }
 
-    public void setUserId(HashSet<Integer> userId) {
-        this.commentIds = userId;
+    public void setCommentIds(HashSet<Integer> commentIds) {
+        this.commentIds = commentIds;
     }
 
-    public void addUserId(int Id) {
-        commentIds.add(Id);
+    public void addCommentId(int id) {
+        commentIds.add(id);
+    }
+
+    public void removeCommentId(int id) {
+        if (commentIds.contains(id)) {
+            commentIds.remove(id);
+        }
     }
 
     @Override
