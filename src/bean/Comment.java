@@ -20,7 +20,7 @@ public class Comment {
     //对此评论的投票
     private int vote;
     //回复Id
-    private HashSet<Integer> replyId = new HashSet<>();
+    private HashSet<Integer> replyIds = new HashSet<>();
 
     public int getId() {
         return Id;
@@ -66,21 +66,21 @@ public class Comment {
         vote++;
     }
 
-    public HashSet<Integer> getReplyId() {
-        return replyId;
+    public HashSet<Integer> getReplyIds() {
+        return replyIds;
     }
 
-    public void setReplyId(HashSet<Integer> replyId) {
-        this.replyId = replyId;
+    public void setReplyIds(HashSet<Integer> replyId) {
+        this.replyIds = replyId;
     }
 
     public void addReply(int Id) {
-        replyId.add(Id);
+        replyIds.add(Id);
     }
 
     public void removeReply(int Id) {
-        if (replyId.contains(Id)) {
-            replyId.remove(Id);
+        if (replyIds.contains(Id)) {
+            replyIds.remove(Id);
         }
     }
 
@@ -92,7 +92,7 @@ public class Comment {
                 ", date=" + date +
                 ", fromUserId=" + fromUserId +
                 ", vote=" + vote +
-                ", replyId=" + replyId +
+                ", replyIds=" + replyIds +
                 '}';
     }
 }
