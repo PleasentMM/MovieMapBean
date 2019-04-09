@@ -16,6 +16,8 @@ public class UserDetails {
     private HashSet<Integer> colleUserIds = new HashSet<>();
     //用户对某个电影的评分,Integer电影Id,Float电影评分
     private HashMap<Integer,Float> rateToMovie = new HashMap<>();
+    //用户对某个地方的评分,Interger位置Id,Float位置评分
+    private HashMap<Integer,Float> rateToGeo = new HashMap<>();
 
     public int getId() {
         return Id;
@@ -85,8 +87,20 @@ public class UserDetails {
         this.rateToMovie = rateToMovie;
     }
 
-    public void addRateToMovie(int movieId, Float rating) {
+    public void addRateToMovie(int movieId, float rating) {
         rateToMovie.put(movieId,rating);
+    }
+
+    public HashMap<Integer, Float> getRateToGeo() {
+        return rateToGeo;
+    }
+
+    public void setRateToGeo(HashMap<Integer, Float> rateToGeo) {
+        this.rateToGeo = rateToGeo;
+    }
+
+    public void addRateToGeo(int geoId,float rating) {
+        rateToGeo.put(geoId,rating);
     }
 
     @Override
