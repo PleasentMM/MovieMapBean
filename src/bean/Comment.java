@@ -4,15 +4,13 @@ import java.util.Date;
 import java.util.HashSet;
 
 public class Comment {
-    //实例化Comment必须有用户Id和评论内容
+    //实例化Comment必须有用户Id和评论内容和电影Id或地理位置Id
     public Comment(String content, int fromUserId) {
         this.content = content;
         this.fromUserId = fromUserId;
     }
-    //评论的电影的ID
-    private int toMovieId;
-    //评论的地理位置ID
-    private int toGeoId;
+    //评论Id
+    private int Id;
     //评论内容
     private String content;
     //评论时间,系统自动设定
@@ -24,20 +22,12 @@ public class Comment {
     //回复Id
     private HashSet<Integer> replyId = new HashSet<>();
 
-    public int getToMovieId() {
-        return toMovieId;
+    public int getId() {
+        return Id;
     }
 
-    public void setToMovieId(int toMovieId) {
-        this.toMovieId = toMovieId;
-    }
-
-    public int getToGeoId() {
-        return toGeoId;
-    }
-
-    public void setToGeoId(int toGeoId) {
-        this.toGeoId = toGeoId;
+    public void setId(int id) {
+        Id = id;
     }
 
     public String getContent() {
@@ -97,8 +87,7 @@ public class Comment {
     @Override
     public String toString() {
         return "Comment{" +
-                "toMovieId=" + toMovieId +
-                ", toGeoId=" + toGeoId +
+                "Id=" + Id +
                 ", content='" + content + '\'' +
                 ", date=" + date +
                 ", fromUserId=" + fromUserId +
