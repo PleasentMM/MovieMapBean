@@ -16,8 +16,6 @@ public class UserDetails {
     private HashSet<Integer> colleUserIds = new HashSet<>();
     //用户对某个电影的评分,Integer电影Id,Float电影评分
     private HashMap<Integer,Float> rateToMovie = new HashMap<>();
-    //用户对某个评论的评分
-    private HashMap<Integer,Float> rateToComment = new HashMap<>();
 
     public int getId() {
         return Id;
@@ -79,7 +77,6 @@ public class UserDetails {
         this.colleUserIds = colleUserId;
     }
 
-
     public HashMap<Integer, Float> getRateToMovie() {
         return rateToMovie;
     }
@@ -92,18 +89,6 @@ public class UserDetails {
         rateToMovie.put(movieId,rating);
     }
 
-    public HashMap<Integer, Float> getRateToComment() {
-        return rateToComment;
-    }
-
-    public void setRateToComment(HashMap<Integer, Float> rateToComment) {
-        this.rateToComment = rateToComment;
-    }
-
-    public void addRateToComment(int commentId, Float rating) {
-        rateToComment.put(commentId,rating);
-    }
-
     @Override
     public String toString() {
         return "UserDetails{" +
@@ -113,7 +98,6 @@ public class UserDetails {
                 ", colleGeoInfoIds=" + colleGeoInfoIds +
                 ", colleUserIds=" + colleUserIds +
                 ", rateToMovie=" + rateToMovie +
-                ", rateToComment=" + rateToComment +
                 '}';
     }
 }

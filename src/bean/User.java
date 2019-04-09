@@ -1,7 +1,5 @@
 package bean;
 
-import java.util.HashSet;
-
 public class User {
     //实例化用户必须有用户名和密码
     public User(String userName, String passWord) {
