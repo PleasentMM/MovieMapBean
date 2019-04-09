@@ -4,9 +4,8 @@ import java.util.Date;
 import java.util.HashSet;
 
 public class Comment {
-    //实例化Comment必须有用户Id和评论内容和电影Id或地理位置Id
-    public Comment(int toMovieId, String content, int fromUserId) {
-        this.toMovieId = toMovieId;
+    //实例化Comment必须有用户Id和评论内容
+    public Comment(String content, int fromUserId) {
         this.content = content;
         this.fromUserId = fromUserId;
     }
