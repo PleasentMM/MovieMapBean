@@ -112,6 +112,7 @@ public class UserDetails {
                 ", colleGeoInfoIds=" + colleGeoInfoIds +
                 ", colleUserIds=" + colleUserIds +
                 ", rateToMovie=" + rateToMovie +
+                ", rateToGeo=" + rateToGeo +
                 '}';
     }
 }
