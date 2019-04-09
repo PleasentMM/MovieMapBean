@@ -10,6 +10,8 @@ public class User {
     private int Id;
     //用户名
     private String userName;
+    //用户头像URL
+    private String userHeadPicUrl;
     //昵称
     private String nickName;
     //密码
@@ -31,6 +33,18 @@ public class User {
         return userName;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserHeadPicUrl() {
+        return userHeadPicUrl;
+    }
+
+    public void setUserHeadPicUrl(String userHeadPicUrl) {
+        this.userHeadPicUrl = userHeadPicUrl;
+    }
+
     public String getNickName() {
         return nickName;
     }
@@ -41,6 +55,10 @@ public class User {
 
     public String getPassWord() {
         return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public String getSex() {
