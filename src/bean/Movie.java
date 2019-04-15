@@ -36,6 +36,8 @@ public class Movie {
     private float rating;
     //评价人数
     private int ratedCount;
+    //电影剧照URL
+    private HashSet<String> stagePhotosURL = new HashSet<>();
     //相关的地理位置信息ID,存数据库时经行序列化
     private HashSet<Integer> geoInfoIds = new HashSet<>();
     //相关的回复信息ID,存数据库时经行序列化
@@ -149,6 +151,24 @@ public class Movie {
         this.ratedCount = ratedCount;
     }
 
+    public void addStagePhotoURL(String url) {
+        stagePhotosURL.add(url);
+    }
+
+    public void removeStagePhotoURL(String url) {
+        if (stagePhotosURL.contains(url)) {
+            stagePhotosURL.remove(url);
+        }
+    }
+
+    public HashSet<String> getStagePhotosURL() {
+        return stagePhotosURL;
+    }
+
+    public void setStagePhotosURL(HashSet<String> stagePhotosURL) {
+        this.stagePhotosURL = stagePhotosURL;
+    }
+
     public void addGeoInfoIds(int Id) {
         geoInfoIds.add(Id);
     }
@@ -190,6 +210,7 @@ public class Movie {
         return "Movie{" +
                 "Id=" + Id +
                 ", name='" + name + '\'' +
+                ", year=" + year +
                 ", director='" + director + '\'' +
                 ", screenWriter='" + screenWriter + '\'' +
                 ", performer='" + performer + '\'' +
@@ -201,6 +222,7 @@ public class Movie {
                 ", synopsis='" + synopsis + '\'' +
                 ", rating=" + rating +
                 ", ratedCount=" + ratedCount +
+                ", stagePhotosURL=" + stagePhotosURL +
                 ", geoInfoIds=" + geoInfoIds +
                 ", commentIds=" + commentIds +
                 '}';
